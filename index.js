@@ -13,6 +13,7 @@ const owner = process.env.GITHUB_USERNAME;
 const repo = process.env.GITHUB_REPO;
 
 app.post("/create-md", async (req, res) => {
+  console.log("/create-md route called");
   const { content, folderPath, fileName } = req.body;
 
   if (!content || !folderPath || !fileName) {
